@@ -1,6 +1,9 @@
 text = 'Hello World'
 shift = 3
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-for char in text:
+for char in text.lower():
     index = alphabet.find(char)
-    print(index)
+    print(char, index)
+    new_index = index + shift
+
+    

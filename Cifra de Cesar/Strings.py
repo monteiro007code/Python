@@ -20,6 +20,6 @@ text = 'Hello World'
 shift = 3
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 index = alphabet.find(text[0].lower())
-print(index) # traz a posição 
+print(index) # traz a posição 7
 shifted = alphabet[index + shift]
 print(shifted) # traz a letra 

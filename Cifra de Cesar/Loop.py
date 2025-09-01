@@ -1,10 +1,17 @@
+
+
+#Definição das variáveis
+
 text = 'Hello World'
 shift = 3
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
+encrypted_text = ''
+
+#Operações
+
 for char in text.lower():
     index = alphabet.find(char)
-   # print(char, index)
     new_index = index + shift
-    new_char = alphabet[new_index]
-    print('char:', char, 'new char:', new_char)
+    encrypted_text = encrypted_text + alphabet[new_index] # 
+    print('char:', char, 'encrypted text:', encrypted_text)
     

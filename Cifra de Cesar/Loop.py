@@ -2,19 +2,23 @@
 
 #Definição das variáveis
 
-text = 'Hello World'
+text = 'Hello Zaira'
 shift = 3
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-encrypted_text = ''
 
-#Operações
+def cesar(message , offset):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    encrypted_text = ''
 
-for char in text.lower():
-    if char == ' ':
-        encrypted_text += char 
-    else:
-        index = alphabet.find(char)
-        new_index = index + shift
-        encrypted_text += char + alphabet[new_index] 
-    print('char:', char, 'encrypted text:', encrypted_text)
-    
+    for char in message.lower():
+        if char == ' ':
+            encrypted_text += char
+        else:
+            index = alphabet.find(char)
+            new_index = (index + offset) % len(alphabet)
+            encrypted_text += alphabet[new_index]
+    print('plain text:', message)
+    print( 'encrypted text:', encrypted_text)
+
+cesar(text, shift)
+cesar(text, 13)
+ 

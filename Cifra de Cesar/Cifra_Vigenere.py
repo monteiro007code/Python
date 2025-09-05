@@ -1,5 +1,5 @@
-text = 'Hello Zaira!'
-custom_key = 'python'
+text = 'mrttaqrhknsw ih puggrur' # linha
+custom_key = 'python' # coluna
 
 def vigenere(message, key, direction = 1): # direction tem um valor padrão, setado.
     key_index = 0
@@ -24,10 +24,18 @@ def vigenere(message, key, direction = 1): # direction tem um valor padrão, set
     
     return final_message
 
-encryption = vigenere(text, custom_key)
-print(encryption)
-decryption = vigenere(encryption, custom_key, -1)
-print(decryption)
+
+def encrypt(message, key):
+    return vigenere(message, key)
+
+def decrypt(message, key):  
+    return vigenere(message, key, -1)
+
+
+print(f'\nEncrypted text: {text}')
+print(f'Key: {custom_key}')
+decryption = decrypt(text, custom_key)
+print(f'\nDecrypted text: {decryption}\n')
 
 
 

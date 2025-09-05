@@ -10,6 +10,7 @@ def cesar(message , offset):
     encrypted_text = ''
 
     for char in message.lower():
+        # Adicione espaço a mensagem
         if char == ' ':
             encrypted_text += char
         else:
